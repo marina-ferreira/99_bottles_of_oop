@@ -1,8 +1,7 @@
 gem 'minitest', '~> 5.4'
 require 'minitest/autorun'
 require 'minitest/pride'
-# require_relative '../lib/bottles'
-require_relative '../../chapter_1/04_shameless_green.rb'
+require_relative '../lib/bottles'
 
 class BottlesTest < Minitest::Test
   def test_the_first_verse
