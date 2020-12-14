@@ -1,6 +1,6 @@
-# 99 Bottles of OOP - Sandi Metz
+# 99 Bottles of OOP by Sandi Metz
 
-## Chapter 1
+## Chapter 1 - Rediscovering Simplicity
 
 ### Making the Code Clear
 
@@ -26,7 +26,7 @@ several places. Naming your methods with the wrong abstractions may force those
 changes. To avoid that, methods should not be named after what they do but after
 what they mean (the concept/abstraction they represent).
 
-💡 Methods should be named after what they represent in the context of your domain.
+> 💡 Methods should be named after what they represent in the context of your domain.
 
 ### Knowing When to Stop
 
@@ -58,3 +58,22 @@ abstraction will be much harder than dealing with the current duplication.
     * Conditions: counts conditional logic
 
   A nifty ABC-ish tool for ruby is [Flog](https://ruby.sadi.st/Flog.html).
+
+## Chapter 2 - Test Driving Shameless Green
+
+  The TDD (Test Driven Development) mantra says code should be produced by
+following a reg/green/refactor cycle.
+
+> “Quick Green excuses all sins.“ - Kent Beck
+
+  The above phrase means that by using TDD you should concentrate on writing the
+simplest piece of code possible to get the test to pass. The focus should be on
+maximum understandability instead of changeability.
+
+  Tolerating some duplication is fine as long as the benefit of understandability
+is still relevant. Premature usage of the DRY principle may lead to incorrect
+abstractions that will hide and make harder to comprehend the context as a whole
+due to the indirections.
+
+> 💡 The use of case implies that the condition tested remains the same. If/elsif
+  means that each condition varies in a meaningful way.
