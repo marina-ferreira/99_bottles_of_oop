@@ -90,3 +90,13 @@ Skipping steps may lead to mistakes that will cascade to the next tests.
   Triangulate, is described as a way to "conservatively drive abstraction with
 tests". Multiple tests should be written at once and the code should be thought
 to pass all the tests. This should lead you to the correct abstraction.
+
+  Test should be completely ignorant about the object in test. Each method should
+be tested in isolation of every other, as if they didn't exist.
+
+> 💡 Tests are the place for concretion, not abstractions, those belong in code.
+
+  The attempt to dry out the code by using abstractions in the test, force you
+to mirror the object under test knowledge. That couples both objects, making the
+test prone to break unnecessarily in every detail change or even return false
+positives.
