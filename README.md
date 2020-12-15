@@ -77,3 +77,16 @@ due to the indirections.
 
 > 💡 The use of case implies that the condition tested remains the same. If/elsif
   means that each condition varies in a meaningful way.
+
+Some of Kent Beck's "Green Bar Patterns" that describe ways to make tests pass:
+
+  1. Fake It ("Til You Make It")
+  2. Obvious Implementation
+  3. Triangulate
+
+  The idea is that by taking very tiny steps and writing the simplest code possible
+just to make the test green, will incrementally reveal the correct implementation.
+Skipping steps may lead to mistakes that will cascade to the next tests.
+  Triangulate, is described as a way to "conservatively drive abstraction with
+tests". Multiple tests should be written at once and the code should be thought
+to pass all the tests. This should lead you to the correct abstraction.
