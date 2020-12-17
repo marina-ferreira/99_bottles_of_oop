@@ -100,3 +100,41 @@ be tested in isolation of every other, as if they didn't exist.
 to mirror the object under test knowledge. That couples both objects, making the
 test prone to break unnecessarily in every detail change or even return false
 positives.
+
+## Chapter 3 - Unearthing Concepts
+
+  Implementing a new requirement is more than simply adjusting the new code to
+accomplish the feature. Before touching the code, it's necessary to determine if
+the code is open to receive that new addition. The Open/Closed (the O in SOLID)
+principle should be applied:
+
+> 💡 Open/Closed: Objects should be open for extension and closed for modification.
+
+  Code is open to a new requirement when you can meet that new requirement without
+changing existing code. In case it is not open, then it needs to be refactored in
+order to become open and then the addition should follow. Refactoring and additions
+should not overlap.
+  The following chart steps will help achieving the open state:
+
+                +-------------+                      +--------------+
+                |             | Yes                  |   Make the   |
+      --------->| is it open? |--------------------->|    change    |
+      |         |             |              ^       +--------------+
+      |         +------+------+              |
+      |                | No                  |
+      |                |                     |
+      |                v                     |
+      |        +---------------+             |
+      |        |  Do you know  | Yes  +------------+
+      |        |  how to make  |----->|  Make it   |
+      |        |   it open?    |      |    open    |
+      |        +---------------+      +------------+
+      |                | No
+      |                |
+      |                v
+      |        +-------+---------+
+      |        | Remove the      |
+      ---------| easiest to fix/ |
+               | best understood |
+               | code smell      |
+               +-----------------+
