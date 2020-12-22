@@ -138,3 +138,30 @@ should not overlap.
                | best understood |
                | code smell      |
                +-----------------+
+
+  While refactoring it's important not to take several steps at a time. That will
+help unearth abstractions along with very explicit errors in the tests.
+  If the abstraction is hard to find then concentrating on removing code smells
+may lead in that way. And those should be removed by following the `Flocking Rules`
+
+*** Flocking Rules ***
+
+    1) Select thing that are most alike
+    2) Find the smallest difference between them
+    3) Make the simplest that will remive that difference
+      a) Parse the new code
+      b) Parse and execute it
+      c) Parse, execute and use its results
+      d) Delete unused code
+
+    * For now, change only one line at a time.
+    * Run the tests after every change.
+    * If the tests fail, undo and make a better change
+
+> 💡 The focus here is encapsulating the concept that varies, a theme of many
+design patterns. - Gang of Four
+
+"Difference holds the key to understanding. If two concrete examples represent
+the same abstraction and they contain a difference, that difference must represent
+a smaller abstraction within the larger one. If you can name the difference,
+you’ve identified that smaller abstraction." - Sandi Metz
