@@ -165,3 +165,99 @@ design patterns. - Gang of Four
 the same abstraction and they contain a difference, that difference must represent
 a smaller abstraction within the larger one. If you can name the difference,
 you’ve identified that smaller abstraction." - Sandi Metz
+
+## Chapter 4
+
+  Liskov principle says every subclass should be substitutable by its superclass.
+That can be extended to duck types. When a duck plays a role, it has to implement
+every rule of that role. It has to be consistent and predictable.
+
+  "Liskov prohibits you from doing anything that would force the sender of a message
+to test the returned result in order to know how to behave."- Sandi Metz
+
+## Chapter 5
+
+  In this chapter the non object oriented approach of the flocked five methods,
+that obsess over the number argument, know the conditions and supply behavior
+(known as Primitive Obsession) is substituted for a message send to the
+BottleNumber class.
+
+  💡 "As an OO practitioner, when you see a conditional, the hairs on your neck should
+stand up. Its very presence ought to offend your sensibilities. You should feel
+entitled to send  messages to objects, and look for a way to write code that allows
+you to do so. The above pattern means that objects are missing, and suggests that
+subsequent refactorings are needed to reveal them. Be on the lookout for this code
+shape, as it implies that there’s more to be done." - Sandi Metz.
+
+  💡 "Manageable OO applications consist of pools of small objects that collaborate
+to accomplish tasks. [...] However, there’s a big difference between a conditional
+that selects the correct object and one that supplies behavior. The first is
+acceptable and generally unavoidable. The second suggests that you are missing
+objects in your domain." - Sandi Metz.
+
+  💡 "Obsessing on a primitive results in code that passes built-in types around
+and supplies behavior for them." - Sandi Metz
+
+  Primitive Obsession should be cured with Extract Class recipe. The logic should
+be extracted to an object to be used in place of the primitive.
+
+### Immutability
+
+  Immutable objects are ones that do not change. In a functional world when a cup
+of coffee is empty it does not get refilled, it actually gets replaced by a new
+cup of coffee already full. As everything in life it comes with costs and benefits.
+The benefit of never mutating objects is that those objects are highly stable and
+predictable. The cost is that creating a new object every time it needs change may
+affect performance.
+
+### Caching
+
+  A cache is a local copy of something stored elsewhere. Saving a local copy of
+the results of an expensive operation, or caching it, increases the speed of your
+application, and lower costs.
+  Caching is easy, figuring out when update is needed is not. Sometimes the cache
+management is so complicated that is not worth the trouble.
+
+## Chapter 6
+
+  💡 "Data Clump is defined as the situation in which several (three or more)
+data fields routinely occur together." - Sandi Metz
+
+  The Switch Statement code smell may be cured with the following recipes:
+
+  1. Replace Conditional with State/Strategy
+    Uses composition to disperse conditions branches into smaller objects,
+    selected and plugged back in at runtime.
+
+  2. Replace Conditional with Polymorphism
+    Uses inheritance to create a superclass that holds the default (false branch)
+    and adds subclasses for the true branches, also selected and plugged back in
+    at runtime.
+
+  *** Replace Conditional with Polymorphism Recipe ***
+
+    1. Create a subclass to stand in for the value upon which you switch.
+      a. Copy one method that switches on that value into the subclass.
+      b. In the subclass, remove everything but the true branch of the conditional.
+        i. At this point, create a factory if it does not yet exist, and
+        ii. Add this subclass to the factory if not yet included.
+
+      c. In the superclass, remove everything but the false branch of the conditional.
+      d. Repeat steps a-c until all methods that switch on the value are dispersed.
+
+    2. Iterate until a subclass exists for every different value upon which you switch.
+
+  💡 "Make the change easy (warning: this may be hard), then make the easy change"
+  — Kent Beck
+
+## Chapter 7
+
+  Factories don't know how to do stuff, instead they know how to choose who does.
+Breaking that knowledge apart is object oriented programming.
+
+  Factories vary along these dimensions and each has its trade-offs:
+
+    1. The factory can be open to new variants or closed.
+    2. The logic that chooses a variant can be owned by the factory or by the variant.
+    3. The factory can be responsible for knowing/figuring out which classes are
+       eligible to be manufactured or the variants can volunteer themselves.
