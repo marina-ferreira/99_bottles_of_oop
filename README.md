@@ -261,3 +261,9 @@ Breaking that knowledge apart is object oriented programming.
     2. The logic that chooses a variant can be owned by the factory or by the variant.
     3. The factory can be responsible for knowing/figuring out which classes are
        eligible to be manufactured or the variants can volunteer themselves.
+
+## Chapter 8
+
+  A technique that may be a little risky but that is quite efficient is Wishful
+Thinking. It was used in this example to reveal the lyrics method in BottleVerse.
+That was done by asking the class Bottles what does she want.
