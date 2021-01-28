@@ -267,3 +267,14 @@ Breaking that knowledge apart is object oriented programming.
   A technique that may be a little risky but that is quite efficient is Wishful
 Thinking. It was used in this example to reveal the lyrics method in BottleVerse.
 That was done by asking the class Bottles what does she want.
+
+💡 "Isolating variants often requires that you invert dependencies, and an excellent
+  technique for inverting dependencies is to inject them. This section isolated
+  the BottleVerse variant and then inverted the dependency by injecting
+  BottleVerse as a player of the verse template role." - Sandi Metz
+
+  Train wrecks generate code that is tightly coupled, have large contexts and
+therefore is hard to reuse. That is a violation of the Law of Demeter that states:
+
+  a) objects that are passed in as arguments to the method
+  b) objects that are directly available to self
