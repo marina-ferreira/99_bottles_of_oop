@@ -278,3 +278,24 @@ therefore is hard to reuse. That is a violation of the Law of Demeter that state
 
   a) objects that are passed in as arguments to the method
   b) objects that are directly available to self
+
+## Chapter 9
+
+  Tests are not only meant to check the correctness of the code. They also serve
+as documentation and disclose coupling reusability issues. They should be easy
+to create simple and intention revealing.
+  Unit tests may require other objects to collaborate, but they address only the
+unit of interest. Integration tests are meant to prove that groups of objects
+collaborate with each other correctly. They test the entire chain of behavior.
+  General approach should be to create unit tests for every class, that test the
+public API. And that should be started on the smallest, simplest, most untangled
+object.
+
+  💡 100% test coverage == 100% of the code should be exercised during unit tests
+    100% test coverage != 100% of the public methods should have their own personal tests
+
+  Tests that are too much coupled to implementation details should be omitted.
+While all code needs to be tested, some tests aren’t worth writing.
+
+  💡 "Object oriented programming rule that prohibits the use of pattern names in
+   class names. [...] Class names should reflect concepts in your domain, not the patterns used to create them."
