@@ -1,4 +1,53 @@
-# 99 Bottles of OOP by Sandi Metz
+<h1 align="left">
+  99 Bottles of OOP
+  <sub><br />Sandi Metz</sub>
+</h1>
+
+<img
+  alt="99 Bottles of OOP"
+  width="45%"
+  align="right"
+  src="https://user-images.githubusercontent.com/4058722/108829391-e3b14a80-75a6-11eb-8b49-9ebf54dab410.jpg"
+/>
+<br />
+
+<p align="left">
+  <img
+    alt="Ruby Version"
+    src="https://img.shields.io/badge/ruby-2.7.0-ab1501?style=for-the-badge&logo=ruby"
+  />
+  <br />
+</p>
+
+<p align="left">
+  <a href="#bookmark-about">About</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#rocket-dependencies">Dependencies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#link-links">Links</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#link-links">Notes</a>
+</p>
+<br />
+
+## :bookmark: About
+
+  * Object Oriented Design
+  * SOLID Principles
+  * Managing dependencies
+  * Organizing interfaces
+  * Duck Typing
+  * Code Smells
+  * Refactoring Techniques
+  * Test Design
+
+## :floppy_disk: Dependencies
+
+-  [Ruby](https://www.ruby-lang.org/) - v2.7.0
+
+## :link: Links
+
+- [Practical Object Oriented Design in Ruby](https://sandimetz.com/99bottles-sample-ruby)
+
+
+## :black_nib: Notes
 
 ## Chapter 1 - Rediscovering Simplicity
 
