@@ -16,6 +16,10 @@
     alt="Ruby Version"
     src="https://img.shields.io/badge/ruby-2.7.0-ab1501?style=for-the-badge&logo=ruby"
   />
+  <img
+    alt="Minitest Version"
+    src="https://img.shields.io/badge/minitest-5.4-ab1501?style=for-the-badge"
+  />
   <br />
 </p>
 
@@ -41,6 +45,7 @@
 ## :floppy_disk: Dependencies
 
 -  [Ruby](https://www.ruby-lang.org/) - v2.7.0
+-  [Minitest](https://github.com/seattlerb/minitest) - v5.4
 
 ## :link: Links
 
