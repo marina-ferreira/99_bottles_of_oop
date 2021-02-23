@@ -298,4 +298,21 @@ object.
 While all code needs to be tested, some tests aren’t worth writing.
 
   💡 "Object oriented programming rule that prohibits the use of pattern names in
-   class names. [...] Class names should reflect concepts in your domain, not the patterns used to create them."
+   class names. [...] Class names should reflect concepts in your domain, not the
+   patterns used to create them."
+
+  When designed with the following features, object-oriented code can interact
+with new and unanticipated variants without having to change:
+
+  1. Variants are isolated.
+    They’re usually isolated in some kind of object, often a new class.
+
+  2. Variant selection is isolated.
+    Selection happens in factories, which may be as simple as isolated conditionals
+    that choose a class.
+
+  3. Message senders and receivers are loosely coupled.
+    This is commonly accomplished by injecting dependencies.
+
+  4. Variants are interchangeable.
+    Message senders treat injected objects as equivalent players of identical roles.
